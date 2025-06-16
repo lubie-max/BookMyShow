@@ -1,14 +1,13 @@
 package com.bookMyShow.bookMyShow.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import com.bookMyShow.bookMyShow.models.constants.ShowStatus;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
-@Entity
 @Data
+@Entity
 public class Show  extends Base{
 
     private LocalDateTime startTime;
@@ -21,6 +20,8 @@ public class Show  extends Base{
     @ManyToOne
     private  Auditorium aditorium;
 
+    @Enumerated(EnumType.STRING)
+    ShowStatus showSeatStatus;
 
 
 }

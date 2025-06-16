@@ -2,26 +2,22 @@ package com.bookMyShow.bookMyShow.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.Version;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
 @Entity
-public class Users extends  Base {
+public class Theater extends Base{
 
+    private String theaterName ;
 
-    private String username ;
-    private String email ;
-    private String password ;
+    private String city;
 
     @OneToMany
-    @JoinColumn(name = "user_id")
-    private List<Ticket> tickets;
-
-
-
+    @JoinColumn(name = "auditorium_id")
+    private List<Auditorium> auditoriumList;
 
 }
