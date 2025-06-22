@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-public class Show  extends Base{
+public class MovieShow extends Base{
 
     private LocalDateTime startTime;
     private LocalDateTime endTime;

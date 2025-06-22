@@ -29,8 +29,11 @@ public class UserService {
             System.out.println("User in DB ---> " + ifUser);
             throw new UserAlreadyExistsException("Email already registered!");
         }
+        else{
+
         Users savedUser = userRepo.save(user);
         return userMapperUtil.modelToDto(savedUser);
+        }
 
     }
 

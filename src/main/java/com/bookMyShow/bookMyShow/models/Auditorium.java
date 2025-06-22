@@ -15,5 +15,5 @@ public class Auditorium extends  Base {
     private int capacity ;
 
     @OneToMany
-    private List<Show> showList;
+    private List<MovieShow> showList;
 }

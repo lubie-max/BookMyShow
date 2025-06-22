@@ -15,8 +15,8 @@ public class GlobalExceptions {
     }
 
     // fallback
-//    @ExceptionHandler(Exception.class)
-//    public ResponseEntity<String> handleGeneralException(Exception ex) {
-//        return new ResponseEntity<>("Internal Error: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-//    }
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleGeneralException(Exception ex) {
+        return new ResponseEntity<>("Internal Error ----> : " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

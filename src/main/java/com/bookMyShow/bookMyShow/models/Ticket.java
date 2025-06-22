@@ -5,7 +5,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
-import org.apache.catalina.User;
 
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class Ticket extends  Base{
 
     @ManyToOne
     @JoinColumn(name = "show_id")
-    private   Show show;
+    private MovieShow show;
 
 
     double totalPrice;
